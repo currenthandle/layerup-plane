@@ -1,0 +1,39 @@
+export const GAME_CONSTANTS = {
+  // Scene setup
+  FRUSTUM_SIZE: 10,
+
+  AIRCRAFT_MASS: 1000, // kg
+  DRAG_COEFFICIENT: 0.00000006,
+  INITIAL_SPEED: 0.10506480054216756,
+
+  // Throttle parameters
+  MIN_THROTTLE: 0.15,
+  MAX_THROTTLE: 1.0,
+  INITIAL_THROTTLE: 0.15,
+  THROTTLE_STEP: 0.015,
+
+  // Engine response characteristics
+  ENGINE_ACCEL_RESPONSE_TIME: 1.5,
+  ENGINE_DECEL_RESPONSE_TIME: 0.8,
+  POWER_EXPONENT: 1.2, // Power curve exponent
+  MIN_THRUST_PERCENT: 15,
+  ENGINE_POWER: 0.0000000004,
+  RPM_SCALE: 100,
+
+  // Rudder parameters
+  RUDDER_MAX_DEFLECTION: Math.PI / 12,
+  RUDDER_SENSITIVITY: Math.PI / 200,
+  RUDDER_EFFECTIVENESS: 0.76,
+  RUDDER_RETURN_FACTOR: 0.95,
+
+  // Simulation parameters
+  PHYSICS_TIMESTEP: 1 / 60, // 60 Hz simulation
+  TRAJECTORY_MAX_POINTS: 100,
+  TRAJECTORY_MIN_DISTANCE: 0.01,
+  ANGLE_EPSILON: 1e-6, // Angle stabilization threshold
+  UI_UPDATE_INTERVAL: 100, // UI refresh rate (ms)
+
+  // Unit conversions
+  KNOTS_CONVERSION_FACTOR: 700,
+  FORCE_SCALING_FACTOR: 100000000000,
+} as const
